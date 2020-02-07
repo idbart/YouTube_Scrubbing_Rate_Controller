@@ -1,13 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>YouTube Scrubbing Rate Controller</title>
-	<style>
+	<head>
+		<meta charset="UTF-8">
+		<title>YouTube Scrubbing Rate Controller</title>
 		
-	</style>
-</head>
-<body>
-	
-</body>
+		<style>
+			*
+			{
+				font-size: 16px;
+
+				margin: 0;
+				padding: 0;
+			}
+			body
+			{
+			}
+			.wrapper
+			{
+				width: 250px;
+
+				color: white;
+				background: #1f1f1f;
+
+				display: grid;
+				grid-template-columns: 1fr;
+			}
+			.wrapper p
+			{
+				text-align: center;
+				font-size: 2rem;
+			}
+
+			.wrapper > label
+			{
+				cursor: pointer;
+				font-size: 2rem;
+
+				padding: 5% 0;
+
+				display: grid;
+				grid-template-columns: 1fr 3fr;
+				grid-column-gap: 5%;
+				align-items: center;
+				justify-items: center;
+
+				transition: background 500ms ease;
+			}
+			.wrapper > label:hover
+			{
+				background: #635e5e;
+			}
+			.wrapper > label > div
+			{
+				justify-self: start;
+				user-select: none;
+			}
+
+			.wrapper > label > input
+			{
+				display: none;
+			}
+
+			.wrapper > label > img
+			{
+				opacity: 0;
+				height: 100%;
+
+				transition: opacity 250ms ease;
+			}
+			.wrapper > label > input:checked ~ img
+			{
+				opacity: 1;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
+			<p>Scrubb Rate:</p>
+			<label for="rate0.1"> <input  type="radio" name="rate" id="rate0.1" value="0.1"> <img src="images/checkmark.png" alt="a checkmark"> <div> 0.1s </div> </label>
+			<label for="rate0.25"> <input type="radio" name="rate" id="rate0.25" value="0.25"> <img src="images/checkmark.png" alt="a checkmark"> <div> 0.25s </div> </label>
+			<label for="rate0.5"> <input type="radio" name="rate" id="rate0.5" value="0.5"> <img src="images/checkmark.png" alt="a checkmark"> <div> 0.5s </div> </label>
+			<label for="rate1"> <input type="radio" name="rate" id="rate1" value="1"> <img src="images/checkmark.png" alt="a checkmark"> <div> 1s </div> </label>
+			<label for="rate5"> <input type="radio" name="rate" id="rate5" value="5"> <img src="images/checkmark.png" alt="a checkmark"> <div> 5s </div> </label>
+			<label for="rate10"> <input type="radio" name="rate" id="rate10" value="10"> <img src="images/checkmark.png" alt="a checkmark"> <div> 10s </div> </label>
+			<label for="rate20"> <input type="radio" name="rate" id="rate20" value="20"> <img src="images/checkmark.png" alt="a checkmark"> <div> 20s </div> </label>
+			<label for="rate30"> <input type="radio" name="rate" id="rate30" value="30"> <img src="images/checkmark.png" alt="a checkmark"> <div> 30s </div> </label>
+		</div>
+		<script src="popup.js" type="text/javascript"></script>
+	</body>
 </html>
