@@ -3,9 +3,9 @@
 
 	"name": "YouTube Scrubbing Rate Controller",
 	"version": "1.0",
-	"description": "A Chrome browser extension for controlling the arrow-key scrubbing rate on YouTube. To activate: hold the Ctrl key while pressing the right or left arrow keys",
+	"description": "An extension for controlling the scrubbing rate on YouTube. Hold the Ctrl key while pressing the right or left arrow keys",
 
-	"permissions": ["activeTab", "declarativeContent", "storage"],
+	"permissions": ["declarativeContent", "storage"],
 
 	"background": {
 		"scripts": ["background.js"],
