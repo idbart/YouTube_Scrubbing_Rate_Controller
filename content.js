@@ -1,5 +1,5 @@
 //Set debug mode on or off
-const inDebug = true;
+const inDebug = false;
 
 //init vars to hold the DOM elements containing the video and scrubbing graphic
 var vidElement = undefined;
